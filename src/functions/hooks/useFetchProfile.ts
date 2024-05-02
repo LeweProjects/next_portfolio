@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { supabase } from "../../../config/supabase";
+//import { supabase } from "../../../config/supabase";
 
 
 const FetchProfile = () => {
@@ -9,15 +9,15 @@ const FetchProfile = () => {
 
   const [profile, setProfile] = useState<Profile[]>([]);
 
-  useEffect(() => {
-    async function fetchProfileData() {
-      const resp = await supabase.from("profile").select("*");
-      if(resp.data){
-        setProfile(resp.data);
-      }
-    }
-    fetchProfileData();
-  }, []);
+  // useEffect(() => {
+  //   async function fetchProfileData() {
+  //     const resp = await supabase.from("profile").select("*");
+  //     if(resp.data){
+  //       setProfile(resp.data);
+  //     }
+  //   }
+  //   fetchProfileData();
+  // }, []);
 
   return {profile};
 };
