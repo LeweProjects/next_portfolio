@@ -4,6 +4,7 @@ import "./globals.css";
 import Head from "@/components/Layout/Head";
 import Footer from "@/components/Layout/Footer";
 
+
 const inter = Orbitron({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Head />
+        {/* <Head /> */}
         <main>{children}</main>
         <Footer/>
       </body>
